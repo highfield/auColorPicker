@@ -1,0 +1,234 @@
+.au-color-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+  -moz-transition: opacity 0.4s ease, visibility 0.4s ease;
+  -ms-transition: opacity 0.4s ease, visibility 0.4s ease;
+  -o-transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.au-color-modal-overlay.tohide {
+  opacity: 0;
+  visibility: hidden;
+}
+.au-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  line-height: 1;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+  margin-top: -8px;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.au-color:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -8px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) rotate(45deg);
+  border-top-left-radius: 4px;
+}
+.au-color.fg-picker-focus {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 8px;
+}
+.au-color.au-color-modal {
+  top: 50%!important;
+  left: 50%!important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
+  position: fixed!important;
+  margin: 0!important;
+}
+.au-color.au-color-modal:before {
+  display: none;
+}
+.au-color .fg-picker {
+  overflow: hidden;
+}
+
+.au-color.fg-picker-fxs {
+  -webkit-transition: width 0.8s cubic-bezier(1, -0.55, 0.2, 1.37), opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+  -moz-transition: width 0.8s cubic-bezier(1, -0.55, 0.2, 1.37), opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+  -ms-transition: width 0.8s cubic-bezier(1, -0.55, 0.2, 1.37), opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+  -o-transition: width 0.8s cubic-bezier(1, -0.55, 0.2, 1.37), opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+}
+@media only screen and (max-width: 480px) {
+  .au-color.fg-picker-fxs {
+    -webkit-transition: opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+    -moz-transition: opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+    -ms-transition: opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+    -o-transition: opacity 0.2s ease, visibility 0.2s ease, margin 0.2s ease;
+  }
+}
+
+
+.au-color .fg-picker ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+}
+.au-color .fg-picker ul.pick {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 5px;
+}
+.au-color .fg-picker ul.pick:nth-of-type(2) {
+  box-shadow: 0 1px rgba(0, 0, 0, 0.06);
+}
+.au-color .fg-picker ul.pick li {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  border: 1px solid dimgray;
+  margin: 3px;
+  outline: 3px solid transparent;
+}
+
+
+.au-color .fg-picker .pick-btns {
+  margin: -1px;
+  position: relative;
+  z-index: 2;
+  height: 56px;
+}
+.au-color .fg-picker .pick-btns div {
+  cursor: pointer;
+  line-height: 0;
+}
+.au-color .fg-picker .pick-btns .pick-submit {
+  margin: 0 auto;
+  width: 56px;
+  height: 56px;
+  line-height: 64px;
+  border-radius: 56px;
+  font-size: 24px;
+  cursor: pointer;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
+/*.au-color .fg-picker .pick-btns .pick-submit:after {
+  font-family: "datedropper" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 60px;
+  content: "\65";
+}*/
+.au-color .fg-picker .pick-btns .pick-submit:hover {
+  top: 4px;
+  box-shadow: 0 0 0 16px rgba(0, 0, 0, 0.04), 0 0 0 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.au-color.primary {
+  border-radius: 6px;
+  width: 180px;
+}
+.au-color.primary .fg-picker {
+  border-radius: 6px;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.1);
+}
+.au-color.primary .pick-l {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.au-color.primary:before,
+.au-color.primary .pick-submit,
+.au-color.primary .pick-lg-b .pick-sl:before,
+.au-color.primary .pick-m,
+.au-color.primary .pick-lg-h {
+  background-color: #fd4741;
+}
+.au-color.primary .pick-y.pick-jump,
+.au-color.primary .pick li span,
+.au-color.primary .pick-lg-b .pick-wke,
+.au-color.primary .pick-btn {
+  color: #fd4741;
+}
+.au-color.primary .fg-picker,
+.au-color.primary .pick-l {
+  background-color: #ffffff;
+}
+.au-color.primary .fg-picker,
+.au-color.primary .pick-arw,
+.au-color.primary .pick-l {
+  color: #4d4d4d;
+}
+.au-color.primary .pick-m,
+.au-color.primary .pick-m .pick-arw,
+.au-color.primary .pick-lg-h,
+.au-color.primary .pick-lg-b .pick-sl,
+.au-color.primary .pick-submit {
+  color: #ffffff;
+}
+.au-color.primary.fg-picker-tiny:before,
+.au-color.primary.fg-picker-tiny .pick-m {
+  background-color: #ffffff;
+}
+.au-color.primary.fg-picker-tiny .pick-m,
+.au-color.primary.fg-picker-tiny .pick-m .pick-arw {
+  color: #4d4d4d;
+}
+
+.au-color .null {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+.au-color .au-color-title{
+    margin-top: 12px;
+    margin-left: -50px;
+    margin-right: -50px;
+    text-align: center;
+    color: #DFF3FA;
+    font-size: 1.2em;
+}
